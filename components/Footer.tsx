@@ -28,7 +28,7 @@ export default function Footer() {
             </Link>
 
             <div className="flex flex-col gap-3">
-              <p className="font-display text-sm tracking-widest text-frog-green uppercase">
+              <p className="font-heading text-sm tracking-widest text-frog-green uppercase">
                 {t("talkToShaper")} 🇧🇷
               </p>
 
@@ -69,7 +69,7 @@ export default function Footer() {
 
           {/* Col 2: NAVEGUE */}
           <div>
-            <p className="font-display text-sm tracking-widest text-white uppercase mb-5">
+            <p className="font-heading text-sm tracking-widest text-white uppercase mb-5">
               {t("navigate")}
             </p>
             <ul className="flex flex-col gap-3">
@@ -98,7 +98,7 @@ export default function Footer() {
 
           {/* Col 3: APOIO */}
           <div>
-            <p className="font-display text-sm tracking-widest text-white uppercase mb-5">
+            <p className="font-heading text-sm tracking-widest text-white uppercase mb-5">
               APOIO
             </p>
             <ul className="flex flex-col gap-3">
@@ -122,7 +122,7 @@ export default function Footer() {
 
           {/* Col 4: REDES */}
           <div>
-            <p className="font-display text-sm tracking-widest text-white uppercase mb-5">
+            <p className="font-heading text-sm tracking-widest text-white uppercase mb-5">
               REDES
             </p>
             <div className="flex flex-col gap-4">

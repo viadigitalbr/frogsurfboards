@@ -87,13 +87,13 @@ export default function CookieConsent() {
         <div className="flex gap-3 flex-shrink-0">
           <button
             onClick={essentialOnly}
-            className="px-4 py-2 text-xs font-display font-semibold tracking-wider border border-white/30 text-white/70 rounded hover:border-white hover:text-white transition-colors"
+            className="px-4 py-2 text-xs font-heading font-semibold tracking-wider border border-white/30 text-white/70 rounded hover:border-white hover:text-white transition-colors"
           >
             {t("essentialOnly")}
           </button>
           <button
             onClick={accept}
-            className="px-4 py-2 text-xs font-display font-semibold tracking-wider bg-frog-green text-frog-ink rounded hover:opacity-90 transition-opacity"
+            className="px-4 py-2 text-xs font-heading font-semibold tracking-wider bg-frog-green text-frog-ink rounded hover:opacity-90 transition-opacity"
           >
             {t("accept")}
           </button>

@@ -27,7 +27,7 @@ export default function WhatsAppFloat() {
 
       {/* Texto — aparece no hover */}
       <span
-        className="font-display text-sm tracking-widest text-frog-ink whitespace-nowrap pr-4
+        className="font-heading text-sm tracking-widest text-frog-ink whitespace-nowrap pr-4
           opacity-0 group-hover:opacity-100 transition-opacity duration-200 delay-100"
         aria-hidden="true"
       >

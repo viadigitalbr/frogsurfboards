@@ -41,7 +41,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full bg-frog-ink border-b border-white/10">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 flex items-center h-16 gap-6">
+      <div className="mx-auto max-w-7xl px-10 lg:px-16 flex items-center h-20 pt-2.5 gap-8">
 
         {/* Logo */}
         <Link
@@ -68,7 +68,7 @@ export default function Header() {
             <Link
               key={key}
               href={localizedHref(href)}
-              className="font-display text-sm tracking-widest text-white hover:text-frog-green transition-colors uppercase"
+              className="font-heading text-sm tracking-widest text-white hover:text-frog-green transition-colors uppercase"
             >
               {t(key)}
             </Link>
@@ -101,7 +101,7 @@ export default function Header() {
               <span key={code} className="flex items-center">
                 <button
                   onClick={() => switchLocale(code)}
-                  className={`font-display text-xs tracking-wider px-1 transition-colors ${
+                  className={`font-heading text-xs tracking-wider px-1 transition-colors ${
                     locale === code
                       ? "text-frog-green"
                       : "text-white/50 hover:text-white"
@@ -137,7 +137,7 @@ export default function Header() {
               key={key}
               href={localizedHref(href)}
               onClick={() => setMenuOpen(false)}
-              className="font-display text-sm tracking-widest text-white hover:text-frog-green transition-colors uppercase"
+              className="font-heading text-sm tracking-widest text-white hover:text-frog-green transition-colors uppercase"
             >
               {t(key)}
             </Link>
@@ -168,7 +168,7 @@ export default function Header() {
                 <span key={code} className="flex items-center">
                   <button
                     onClick={() => { switchLocale(code); setMenuOpen(false); }}
-                    className={`font-display text-xs tracking-wider px-1 transition-colors ${
+                    className={`font-heading text-xs tracking-wider px-1 transition-colors ${
                       locale === code
                         ? "text-frog-green"
                         : "text-white/50 hover:text-white"
