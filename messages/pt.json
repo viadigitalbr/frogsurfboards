@@ -1,0 +1,44 @@
+{
+  "nav": {
+    "pranchas": "PRANCHAS",
+    "sobre": "SOBRE A FROG",
+    "duvidas": "DÚVIDAS",
+    "contato": "CONTATO"
+  },
+  "langSwitcher": {
+    "label": "Idioma"
+  },
+  "footer": {
+    "talkToShaper": "FALE COM O SHAPER",
+    "address": "Rua Olímpio R. César, 404 — Praia de Maresias — São Sebastião — São Paulo — Brasil",
+    "navigate": "NAVEGUE",
+    "links": {
+      "pranchas": "Pranchas",
+      "sobre": "Sobre a Frog",
+      "duvidas": "Dúvidas",
+      "contato": "Contato"
+    },
+    "onlineShopping": "COMPRAS ON-LINE",
+    "shoppingLinks": {
+      "comoComprar": "Como comprar",
+      "garantias": "Garantias",
+      "trocas": "Políticas de Trocas e Devolução"
+    },
+    "legal": "© 2025. Frog Surfboards. Todos os direitos reservados.",
+    "privacyPolicy": "Política de Privacidade",
+    "cookiePolicy": "Política de Cookies"
+  },
+  "whatsapp": {
+    "ariaLabel": "Fale conosco pelo WhatsApp"
+  },
+  "cookies": {
+    "message": "Usamos cookies para entender como você navega e melhorar o site.",
+    "accept": "Aceitar",
+    "essentialOnly": "Só essenciais",
+    "policyLink": "Política de Cookies"
+  },
+  "notFound": {
+    "title": "Essa onda a gente não pegou.",
+    "backHome": "Voltar para a home"
+  }
+}
