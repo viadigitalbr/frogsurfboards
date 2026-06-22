@@ -41,7 +41,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full bg-frog-ink">
-      <div className="mx-auto max-w-7xl px-10 lg:px-16 flex items-center py-2 gap-8">
+      <div className="mx-auto max-w-7xl px-10 lg:px-16 flex items-center py-5 gap-8">
 
         {/* Logo */}
         <Link
