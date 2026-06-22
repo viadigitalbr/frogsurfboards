@@ -41,7 +41,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full bg-frog-ink border-b border-white/10">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 flex items-center h-14 gap-6">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 flex items-center h-16 gap-6">
 
         {/* Logo */}
         <Link
@@ -52,16 +52,16 @@ export default function Header() {
           <Image
             src="/Logo-Letter-Branco.png"
             alt="Frog Surfboards"
-            width={90}
-            height={30}
-            className="h-8 w-auto object-contain"
+            width={120}
+            height={44}
+            className="h-11 w-auto object-contain"
             priority
           />
         </Link>
 
         {/* Desktop nav — centro */}
         <nav
-          className="hidden md:flex items-center gap-7 flex-1 justify-center"
+          className="hidden md:flex items-center gap-5 flex-1 justify-center"
           aria-label="Navegação principal"
         >
           {NAV_LINKS.map(({ key, href }) => (
@@ -76,13 +76,13 @@ export default function Header() {
         </nav>
 
         {/* Direita: redes + seletor idioma */}
-        <div className="hidden md:flex items-center gap-3 flex-shrink-0 ml-auto">
+        <div className="hidden md:flex items-center gap-4 flex-shrink-0 ml-auto">
           <a
             href="https://www.instagram.com/frog.surfboards/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram da Frog Surfboards"
-            className="text-white/70 hover:text-frog-green transition-colors"
+            className="text-white hover:text-frog-green transition-colors"
           >
             <InstagramIcon />
           </a>
@@ -91,14 +91,12 @@ export default function Header() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="YouTube da Frog Surfboards"
-            className="text-white/70 hover:text-frog-green transition-colors"
+            className="text-white hover:text-frog-green transition-colors"
           >
             <YouTubeIcon />
           </a>
 
-          <div className="w-px h-4 bg-white/20 mx-1" />
-
-          <div className="flex items-center gap-0.5">
+          <div className="flex items-center gap-0.5 ml-1">
             {LOCALES.map(({ code, label }, i) => (
               <span key={code} className="flex items-center">
                 <button
@@ -193,7 +191,7 @@ export default function Header() {
 
 function InstagramIcon() {
   return (
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
       <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
       <circle cx="12" cy="12" r="4" />
       <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
@@ -203,7 +201,7 @@ function InstagramIcon() {
 
 function YouTubeIcon() {
   return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
       <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.5 15.6V8.4l6.3 3.6-6.3 3.6z" />
     </svg>
   );
