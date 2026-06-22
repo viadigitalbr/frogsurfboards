@@ -25,7 +25,10 @@ const config: Config = {
         },
       },
       fontFamily: {
-        display: ["var(--font-oswald)", "Impact", "sans-serif"],
+        // --font-display aponta para Bebas Neue local (.otf). Para trocar de fonte de título
+        // (ex: Bebas Neue Pro via Adobe Fonts), basta alterar a var CSS --font-display no
+        // layout.tsx — nenhum componente precisa mudar.
+        display: ["var(--font-display)", "Impact", "sans-serif"],
         sans: ["var(--font-opensans)", "system-ui", "sans-serif"],
       },
     },

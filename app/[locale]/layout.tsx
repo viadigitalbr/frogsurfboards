@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Oswald, Open_Sans } from "next/font/google";
+import localFont from "next/font/local";
+import { Open_Sans } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -9,10 +10,22 @@ import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import CookieConsent from "@/components/CookieConsent";
 
-const oswald = Oswald({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-oswald",
+/*
+ * Bebas Neue (local .otf) — fonte de títulos atual da marca.
+ *
+ * Para adicionar pesos extras (Light/Regular/Book) quando a Viviana fornecer os arquivos,
+ * inclua entradas em `src` aqui e ajuste os pesos.
+ *
+ * Para trocar para Bebas Neue Pro via Adobe Fonts Web Project no futuro:
+ *   1. Remova este bloco localFont.
+ *   2. Adicione o <link> do kit Adobe Fonts no <head>.
+ *   3. Mude `variable: "--font-display"` para a var desejada — ou mantenha --font-display
+ *      apontando para o font-family do kit Adobe. O resto do código não muda.
+ */
+const bebas = localFont({
+  src: "../fonts/BebasNeue-Bold.otf",
+  variable: "--font-display",
+  weight: "700",
   display: "swap",
 });
 
@@ -64,7 +77,7 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
-      className={`${oswald.variable} ${openSans.variable}`}
+      className={`${bebas.variable} ${openSans.variable}`}
     >
       <body className="antialiased">
         <NextIntlClientProvider messages={messages}>
