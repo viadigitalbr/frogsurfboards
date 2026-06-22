@@ -40,8 +40,8 @@ export default function Header() {
   }
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-frog-ink border-b border-white/10">
-      <div className="mx-auto max-w-7xl px-10 lg:px-16 flex items-center h-20 pt-2.5 gap-8">
+    <header className="sticky top-0 z-50 w-full bg-frog-ink">
+      <div className="mx-auto max-w-7xl px-10 lg:px-16 flex items-center py-2 gap-8">
 
         {/* Logo */}
         <Link
@@ -61,14 +61,16 @@ export default function Header() {
 
         {/* Desktop nav — centro */}
         <nav
-          className="hidden md:flex items-center gap-5 flex-1 justify-center"
+          className="hidden md:flex items-center flex-1 justify-center"
+          style={{ gap: "2rem" }}
           aria-label="Navegação principal"
         >
           {NAV_LINKS.map(({ key, href }) => (
             <Link
               key={key}
               href={localizedHref(href)}
-              className="font-heading text-sm tracking-widest text-white hover:text-frog-green transition-colors uppercase"
+              className="font-heading text-white hover:text-frog-green transition-colors uppercase"
+              style={{ fontSize: "22px", fontWeight: 400, lineHeight: "10px" }}
             >
               {t(key)}
             </Link>
@@ -101,7 +103,8 @@ export default function Header() {
               <span key={code} className="flex items-center">
                 <button
                   onClick={() => switchLocale(code)}
-                  className={`font-heading text-xs tracking-wider px-1 transition-colors ${
+                  style={{ fontSize: "0.95rem" }}
+                  className={`font-heading tracking-wider px-1 transition-colors ${
                     locale === code
                       ? "text-frog-green"
                       : "text-white/50 hover:text-white"
@@ -168,7 +171,8 @@ export default function Header() {
                 <span key={code} className="flex items-center">
                   <button
                     onClick={() => { switchLocale(code); setMenuOpen(false); }}
-                    className={`font-heading text-xs tracking-wider px-1 transition-colors ${
+                    style={{ fontSize: "0.95rem" }}
+                  className={`font-heading tracking-wider px-1 transition-colors ${
                       locale === code
                         ? "text-frog-green"
                         : "text-white/50 hover:text-white"
