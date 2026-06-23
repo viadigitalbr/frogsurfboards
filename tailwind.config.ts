@@ -18,10 +18,14 @@ const config: Config = {
           aqua: "#17BEBB",
           pink: "#A4036F",
           purple: "#542E71",
-          // acentos por modelo (confirmar nos logos reais):
-          hellfish: "#3E8E7E",
-          wildtwin: "#C5612C",
+          // acentos por modelo (definitivos — cores de apoio da identidade visual):
+          hellfish: "#17BEBB",
+          wildtwin: "#FF4000",
           msv: "#262626",
+          krypto: "#A4036F",
+          libertyflow: "#347FD5",
+          savage: "#542E71",
+          kingfrog: "#FFB30F",
         },
       },
       fontFamily: {
