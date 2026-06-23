@@ -11,156 +11,149 @@ export default function Footer() {
   }
 
   return (
-    <footer className="bg-frog-ink text-white border-t border-white/10">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 py-14">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
+    <footer className="bg-frog-ink text-white">
+      <div className="mx-auto max-w-7xl px-10 lg:px-16 py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
 
-          {/* Col 1: logo + contato + endereço */}
-          <div className="flex flex-col gap-6 lg:col-span-1">
-            <Link href={lh("/")} aria-label="Frog Surfboards — página inicial" className="inline-block">
+          {/* Col 1: Logo grande + redes sociais */}
+          <div className="flex flex-col items-center gap-8">
+            <Link href={lh("/")} aria-label="Frog Surfboards — página inicial">
               <Image
                 src="/Logo-Principal-Branco.png"
                 alt="Frog Surfboards"
-                width={160}
-                height={160}
-                className="h-36 w-auto object-contain"
+                width={220}
+                height={260}
+                className="w-48 lg:w-56 h-auto object-contain"
               />
             </Link>
 
-            <div className="flex flex-col gap-3">
-              <p className="font-heading text-sm tracking-widest text-frog-green uppercase">
-                {t("talkToShaper")} 🇧🇷
-              </p>
-
-              <div className="flex flex-col gap-2">
-                <a
-                  href="https://wa.me/5512997060472"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-sm text-white/80 hover:text-frog-green transition-colors"
-                >
-                  <WhatsAppIcon />
-                  +55 12 99706-0472
-                </a>
-                <a
-                  href="tel:+5512997060472"
-                  className="flex items-center gap-2 text-sm text-white/80 hover:text-frog-green transition-colors"
-                >
-                  <PhoneIcon />
-                  +55 12 99706-0472
-                </a>
-                <a
-                  href="mailto:contato@frogsurfboards.com.br"
-                  className="flex items-center gap-2 text-sm text-white/80 hover:text-frog-green transition-colors"
-                >
-                  <MailIcon />
-                  contato@frogsurfboards.com.br
-                </a>
-              </div>
-
-              <div className="text-sm text-white/60 leading-relaxed mt-1">
-                <span className="font-semibold text-white/80">Endereço:</span>{" "}
-                Rua Olímpio R. César, 404 —{" "}
-                <span className="font-semibold text-white/80">Praia de Maresias</span> —
-                São Sebastião – São Paulo – Brasil
-              </div>
-            </div>
-          </div>
-
-          {/* Col 2: NAVEGUE */}
-          <div>
-            <p className="font-heading text-sm tracking-widest text-white uppercase mb-5">
-              {t("navigate")}
-            </p>
-            <ul className="flex flex-col gap-3">
-              <li>
-                <Link href={lh("/pranchas")} className="text-sm text-white/70 hover:text-frog-green transition-colors">
-                  {t("links.pranchas")}
-                </Link>
-              </li>
-              <li>
-                <Link href={lh("/sobre")} className="text-sm text-white/70 hover:text-frog-green transition-colors">
-                  {t("links.sobre")}
-                </Link>
-              </li>
-              <li>
-                <Link href={lh("/duvidas")} className="text-sm text-white/70 hover:text-frog-green transition-colors">
-                  {t("links.duvidas")}
-                </Link>
-              </li>
-              <li>
-                <Link href={lh("/contato")} className="text-sm text-white/70 hover:text-frog-green transition-colors">
-                  {t("links.contato")}
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Col 3: APOIO */}
-          <div>
-            <p className="font-heading text-sm tracking-widest text-white uppercase mb-5">
-              APOIO
-            </p>
-            <ul className="flex flex-col gap-3">
-              <li>
-                <Link href={lh("/como-comprar")} className="text-sm text-white/70 hover:text-frog-green transition-colors">
-                  {t("shoppingLinks.comoComprar")}
-                </Link>
-              </li>
-              <li>
-                <Link href={lh("/politica-de-privacidade")} className="text-sm text-white/70 hover:text-frog-green transition-colors">
-                  {t("privacyPolicy")}
-                </Link>
-              </li>
-              <li>
-                <Link href={lh("/politica-de-cookies")} className="text-sm text-white/70 hover:text-frog-green transition-colors">
-                  {t("cookiePolicy")}
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Col 4: REDES */}
-          <div>
-            <p className="font-heading text-sm tracking-widest text-white uppercase mb-5">
-              REDES
-            </p>
-            <div className="flex flex-col gap-4">
+            <div className="flex items-center gap-5">
               <a
                 href="https://www.instagram.com/frog.surfboards/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram da Frog Surfboards"
-                className="flex items-center gap-3 text-sm text-white/70 hover:text-frog-green transition-colors group"
+                className="text-white hover:text-frog-green transition-colors"
               >
                 <InstagramIcon />
-                <span>@frog.surfboards</span>
               </a>
               <a
                 href="https://www.youtube.com/@frogsurfboards"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="YouTube da Frog Surfboards"
-                className="flex items-center gap-3 text-sm text-white/70 hover:text-frog-green transition-colors group"
+                className="text-white hover:text-frog-green transition-colors"
               >
                 <YouTubeIcon />
-                <span>@frogsurfboards</span>
               </a>
             </div>
+          </div>
+
+          {/* Col 2: FALE COM O SHAPER + contatos + endereço */}
+          <div className="flex flex-col gap-6">
+            <div>
+              <h2 className="font-heading text-3xl text-white uppercase tracking-wide leading-none mb-3">
+                FALE COM O SHAPER
+              </h2>
+              <Image
+                src="/flag-brazil.webp"
+                alt="Bandeira do Brasil"
+                width={36}
+                height={24}
+                className="w-9 h-auto"
+              />
+            </div>
+
+            <div className="flex flex-col gap-1.5">
+              <a
+                href="https://wa.me/5512997060472"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 text-white/85 hover:text-frog-green transition-colors"
+              >
+                <WhatsAppIcon />
+                <span className="text-base">+55 12 99706-0472</span>
+              </a>
+              <a
+                href="tel:+5512997060472"
+                className="flex items-center gap-3 text-white/85 hover:text-frog-green transition-colors"
+              >
+                <PhoneIcon />
+                <span className="text-base">+55 12 99706-0472</span>
+              </a>
+              <a
+                href="mailto:contato@frogsurfboards.com.br"
+                className="flex items-center gap-3 text-white/85 hover:text-frog-green transition-colors"
+              >
+                <MailIcon />
+                <span className="text-base uppercase tracking-wide">
+                  contato@frogsurfboards.com.br
+                </span>
+              </a>
+            </div>
+
+            <div className="text-base text-white/80 leading-relaxed pt-2">
+              <p>
+                <strong className="text-white">Endereço:</strong>
+              </p>
+              <p>Rua Olímpio R. César, 404</p>
+              <p><strong className="text-white">Praia de Maresias</strong></p>
+              <p>São Sebastião – São Paulo – Brasil</p>
+            </div>
+          </div>
+
+          {/* Col 3: NAVEGUE */}
+          <div>
+            <h2 className="font-heading text-3xl text-white uppercase tracking-wide leading-none mb-8">
+              NAVEGUE
+            </h2>
+            <nav aria-label="Links do rodapé">
+              <ul className="flex flex-col gap-2">
+                <li>
+                  <Link href={lh("/pranchas")} className="text-base text-white/80 hover:text-frog-green transition-colors">
+                    Pranchas
+                  </Link>
+                </li>
+                <li>
+                  <Link href={lh("/sobre")} className="text-base text-white/80 hover:text-frog-green transition-colors">
+                    Sobre a Frog
+                  </Link>
+                </li>
+                <li>
+                  <Link href={lh("/contato")} className="text-base text-white/80 hover:text-frog-green transition-colors">
+                    Contato
+                  </Link>
+                </li>
+              </ul>
+
+              <ul className="flex flex-col gap-2 mt-5">
+                <li>
+                  <Link href={lh("/duvidas")} className="text-base text-white/80 hover:text-frog-green transition-colors">
+                    Dúvidas
+                  </Link>
+                </li>
+                <li>
+                  <Link href={lh("/como-comprar")} className="text-base text-white/80 hover:text-frog-green transition-colors">
+                    Como Comprar
+                  </Link>
+                </li>
+              </ul>
+            </nav>
           </div>
         </div>
 
         {/* Linha legal */}
-        <div className="mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/50">
-          <span>{t("legal")}</span>
-          <div className="flex gap-5">
+        <div className="mt-14 pt-6 border-t border-white/15 flex flex-col sm:flex-row items-center justify-between gap-2 text-sm text-white/55">
+          <span>© 2026. Frog Surfboards. Todos os direitos reservados.</span>
+          <span>
             <Link href={lh("/politica-de-privacidade")} className="underline underline-offset-2 hover:text-white transition-colors">
-              {t("privacyPolicy")}
+              Política de Privacidade
             </Link>
+            {" "}e{" "}
             <Link href={lh("/politica-de-cookies")} className="underline underline-offset-2 hover:text-white transition-colors">
-              {t("cookiePolicy")}
+              Políticas de Cookies.
             </Link>
-          </div>
+          </span>
         </div>
       </div>
     </footer>
@@ -169,32 +162,31 @@ export default function Footer() {
 
 function WhatsAppIcon() {
   return (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className="flex-shrink-0">
-      <path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97s-.47-.15-.67.15-.77.97-.94 1.17-.35.22-.64.07a8.1 8.1 0 0 1-2.38-1.47 8.9 8.9 0 0 1-1.65-2.05c-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52s.2-.3.3-.5.05-.37-.02-.52-.67-1.62-.92-2.22c-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37S6 8.42 6 9.52c0 1.1.8 2.16.91 2.31s1.57 2.4 3.8 3.37a12.9 12.9 0 0 0 1.27.47c.53.17 1.02.15 1.4.09.43-.07 1.32-.54 1.51-1.06s.19-.97.13-1.06c-.05-.1-.2-.15-.5-.3zM12.05 2A9.93 9.93 0 0 0 2.1 11.95a9.87 9.87 0 0 0 1.33 4.96L2 22l5.25-1.38A9.94 9.94 0 1 0 12.05 2zm0 18.14a8.24 8.24 0 0 1-4.2-1.15l-.3-.18-3.12.82.83-3.03-.2-.31a8.26 8.26 0 1 1 7 3.85z" />
+    <svg width="20" height="20" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true" className="flex-shrink-0 opacity-80">
+      <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
     </svg>
   );
 }
 
 function PhoneIcon() {
   return (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="flex-shrink-0">
-      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.83a16 16 0 0 0 6.29 6.29l1.62-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+    <svg width="20" height="20" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true" className="flex-shrink-0 opacity-80">
+      <path d="M497.39 361.8l-112-48a24 24 0 0 0-28 6.9l-49.6 60.6A370.66 370.66 0 0 1 130.6 204.11l60.6-49.6a23.94 23.94 0 0 0 6.9-28l-48-112A24.16 24.16 0 0 0 122.6.61l-104 24A24 24 0 0 0 0 48c0 256.5 207.9 464 464 464a24 24 0 0 0 23.4-18.6l24-104a24.29 24.29 0 0 0-14.01-27.6z" />
     </svg>
   );
 }
 
 function MailIcon() {
   return (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="flex-shrink-0">
-      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-      <polyline points="22,6 12,13 2,6" />
+    <svg width="20" height="20" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true" className="flex-shrink-0 opacity-80">
+      <path d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z" />
     </svg>
   );
 }
 
 function InstagramIcon() {
   return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="flex-shrink-0">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
       <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
       <circle cx="12" cy="12" r="4" />
       <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
@@ -204,7 +196,7 @@ function InstagramIcon() {
 
 function YouTubeIcon() {
   return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className="flex-shrink-0">
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
       <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.5 15.6V8.4l6.3 3.6-6.3 3.6z" />
     </svg>
   );
