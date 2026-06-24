@@ -55,14 +55,15 @@ export default function HomeSobre() {
           </div>
         </div>
 
-        {/* Coluna direita — imagem única a-frog.png */}
-        <div className="relative w-full h-72 sm:h-96 lg:h-[420px]">
+        {/* Coluna direita — imagem única a-frog.png sem distorção */}
+        <div className="w-full flex items-center justify-center">
           <Image
             src="/images/sobre/a-frog.png"
             alt="Frog Surfboards — ateliê e pranchas"
-            fill
+            width={700}
+            height={420}
             sizes="(max-width: 1024px) 100vw, 50vw"
-            className="object-cover"
+            className="w-full h-auto object-contain"
           />
         </div>
       </motion.div>

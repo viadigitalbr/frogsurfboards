@@ -74,7 +74,7 @@ export default function CookieConsent() {
       role="dialog"
       aria-live="polite"
       aria-label="Aviso de cookies"
-      className="fixed bottom-0 left-0 right-0 z-50 bg-frog-navy/95 backdrop-blur border-t border-white/10 px-4 py-4 sm:py-5"
+      className="fixed bottom-0 left-0 right-0 z-50 bg-frog-ink/97 backdrop-blur border-t border-white/10 px-4 py-4 sm:py-5"
     >
       <div className="mx-auto max-w-7xl flex flex-col sm:flex-row items-start sm:items-center gap-4">
         <p className="text-sm text-white/80 flex-1">

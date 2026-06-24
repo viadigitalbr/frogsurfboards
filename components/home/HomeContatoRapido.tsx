@@ -30,7 +30,7 @@ export default function HomeContatoRapido() {
   }
 
   return (
-    <section className="bg-frog-cream py-20 px-6">
+    <section className="py-20 px-6" style={{ background: "linear-gradient(to right, #75aa5e, #456f33)" }}>
       <motion.div
         className="max-w-2xl mx-auto"
         initial={prefersReduced ? false : { y: 24 }}
@@ -108,7 +108,10 @@ export default function HomeContatoRapido() {
           {/* Botão */}
           <button
             type="submit"
-            className="w-full bg-frog-green text-frog-ink font-heading uppercase tracking-widest text-base py-4 hover:bg-frog-green/90 transition-colors duration-200 flex items-center justify-center gap-3"
+            className="w-full text-white font-sans text-sm uppercase tracking-wider py-4 transition-colors duration-200 flex items-center justify-center gap-3"
+            style={{ backgroundColor: "#292929", borderRadius: "4px" }}
+            onMouseEnter={e => ((e.currentTarget as HTMLButtonElement).style.backgroundColor = "#1a1a1a")}
+            onMouseLeave={e => ((e.currentTarget as HTMLButtonElement).style.backgroundColor = "#292929")}
           >
             <WhatsAppIcon />
             FALAR COM O SHAPER

@@ -26,17 +26,34 @@ export default function HomeHero({ desktopSrc, mobileSrc, poster }: Props) {
           aria-hidden="true"
         />
       ) : (
-        <video
-          className="absolute inset-0 w-full h-full object-cover"
-          src={desktopSrc}
-          poster={poster}
-          muted
-          autoPlay
-          loop
-          playsInline
-          preload="metadata"
-          aria-hidden="true"
-        />
+        <>
+          {/* Vídeo mobile — oculto em md+ */}
+          <video
+            key={mobileSrc}
+            className="absolute inset-0 w-full h-full object-cover md:hidden"
+            src={mobileSrc}
+            poster={poster}
+            muted
+            autoPlay
+            loop
+            playsInline
+            preload="metadata"
+            aria-hidden="true"
+          />
+          {/* Vídeo desktop — visível em md+ */}
+          <video
+            key={desktopSrc}
+            className="absolute inset-0 w-full h-full object-cover hidden md:block"
+            src={desktopSrc}
+            poster={poster}
+            muted
+            autoPlay
+            loop
+            playsInline
+            preload="metadata"
+            aria-hidden="true"
+          />
+        </>
       )}
 
       {/* Overlay escuro */}
@@ -45,7 +62,7 @@ export default function HomeHero({ desktopSrc, mobileSrc, poster }: Props) {
       {/* Conteúdo */}
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
         <h1 className="font-heading text-[2.2rem] sm:text-[2.6rem] lg:text-[3rem] text-white uppercase tracking-wider leading-tight mb-5">
-          A prancha certa pode transformar seu surf
+          A prancha certa pode<br />transformar seu surf
         </h1>
         <p className="font-sans text-white/85 mb-10 max-w-xl mx-auto" style={{ fontSize: "1rem" }}>
           A gente sabe disso porque vive isso, dentro e fora d&apos;água.

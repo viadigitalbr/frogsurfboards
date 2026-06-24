@@ -1,9 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useTranslations, useLocale } from "next-intl";
+import { useLocale } from "next-intl";
 
 export default function Footer() {
-  const t = useTranslations("footer");
   const locale = useLocale();
 
   function lh(path: string) {
