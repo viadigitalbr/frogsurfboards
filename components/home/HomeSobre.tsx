@@ -16,7 +16,7 @@ export default function HomeSobre() {
       style={{ background: "linear-gradient(to right, #75aa5e, #456f33)" }}
     >
       <motion.div
-        className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center"
+        className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center"
         initial={prefersReduced ? false : { y: 30 }}
         whileInView={{ y: 0 }}
         viewport={{ once: true, margin: "-80px" }}

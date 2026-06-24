@@ -9,6 +9,7 @@ import { motion, useReducedMotion } from "framer-motion";
 export type InstagramImage = {
   src: string;
   alt: string;
+  href: string;
 };
 
 type Props = {
@@ -22,7 +23,7 @@ export default function HomeInstagramGallery({ images }: Props) {
 
   return (
     <section className="bg-frog-ink py-20 px-6">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
           <div>
             <p className="font-heading text-frog-green uppercase tracking-widest text-sm mb-2">
@@ -47,7 +48,7 @@ export default function HomeInstagramGallery({ images }: Props) {
           {images.map((img, i) => (
             <motion.a
               key={img.src}
-              href={INSTAGRAM_URL}
+              href={img.href}
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`Ver no Instagram: ${img.alt}`}

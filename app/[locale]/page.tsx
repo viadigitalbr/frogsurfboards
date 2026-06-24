@@ -20,19 +20,21 @@ export const metadata: Metadata = {
   },
 };
 
-// Fotos escolhidas para a galeria estática do Instagram.
-// Critério: alto contraste, cenas de surf/ateliê/mar — todas de ../Midias/Imagens.
+// Galeria estática do Instagram — imagens de ../Midias/Instagram (12 = mais recente → 1 = mais antiga).
 // Substituir por dados reais da Graph API quando o token estiver pronto (ver PENDENCIAS.md).
 const instagramImages: InstagramImage[] = [
-  { src: "/images/instagram/ig-01.jpg", alt: "Surf em Maresias" },
-  { src: "/images/instagram/ig-02.jpg", alt: "Surfista em ação" },
-  { src: "/images/instagram/ig-03.jpg", alt: "Frog Surfboards em Maresias — sessão com Jo Paiva" },
-  { src: "/images/instagram/ig-04.jpg", alt: "Frog Surfboards em Maresias — sessão com Jo Paiva" },
-  { src: "/images/instagram/ig-05.jpg", alt: "Prancha Frog no mar" },
-  { src: "/images/instagram/ig-06.jpg", alt: "Ateliê Frog Surfboards" },
-  { src: "/images/instagram/ig-07.jpg", alt: "Sessão de surf Frog" },
-  { src: "/images/instagram/ig-08.jpg", alt: "Shape Frog Surfboards" },
-  { src: "/images/instagram/ig-09.jpg", alt: "Frog Surfboards" },
+  { src: "/images/instagram/12.jpg",  alt: "Frog Surfboards no Instagram",  href: "https://www.instagram.com/p/DZIOcf4CCWf/" },
+  { src: "/images/instagram/11.webp", alt: "Frog Surfboards no Instagram",  href: "https://www.instagram.com/p/DZIH8AFEc6N/?img_index=1" },
+  { src: "/images/instagram/10.webp", alt: "Frog Surfboards no Instagram",  href: "https://www.instagram.com/p/DXcYCiEkU_6/?img_index=1" },
+  { src: "/images/instagram/9.webp",  alt: "Frog Surfboards no Instagram",  href: "https://www.instagram.com/p/DUJl5XnkcF5/?img_index=1" },
+  { src: "/images/instagram/8.webp",  alt: "Frog Surfboards no Instagram",  href: "https://www.instagram.com/p/DSTP9FpkQTT/?img_index=1" },
+  { src: "/images/instagram/7.webp",  alt: "Frog Surfboards no Instagram",  href: "https://www.instagram.com/p/DQcmdDkkkrM/?img_index=1" },
+  { src: "/images/instagram/6.webp",  alt: "Frog Surfboards no Instagram",  href: "https://www.instagram.com/p/DQK72a8jGo0/?img_index=1" },
+  { src: "/images/instagram/5.webp",  alt: "Frog Surfboards no Instagram",  href: "https://www.instagram.com/p/DPO4WkdET3m/?img_index=1" },
+  { src: "/images/instagram/4.webp",  alt: "Frog Surfboards no Instagram",  href: "https://www.instagram.com/p/DO82J51kTBs/?img_index=1" },
+  { src: "/images/instagram/3.webp",  alt: "Frog Surfboards no Instagram",  href: "https://www.instagram.com/p/DOZchqHkdkz/?img_index=5" },
+  { src: "/images/instagram/2.webp",  alt: "Frog Surfboards no Instagram",  href: "https://www.instagram.com/p/DN3jvKH4kIi/?img_index=5" },
+  { src: "/images/instagram/1.webp",  alt: "Frog Surfboards no Instagram",  href: "https://www.instagram.com/p/DNRXA17JUJR/?img_index=5" },
 ];
 
 export default function HomePage() {
