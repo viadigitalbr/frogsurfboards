@@ -13,7 +13,7 @@ type Props = {
 export default function HomeHero({ desktopSrc, mobileSrc, poster }: Props) {
   const locale = useLocale();
   const prefersReduced = useReducedMotion();
-  const href = locale === "pt" ? "/sobre" : `/${locale}/sobre`;
+  const href = locale === "pt" ? "/pranchas" : `/${locale}/pranchas`;
 
   return (
     <section className="relative w-full h-screen min-h-[560px] flex items-center justify-center overflow-hidden">
@@ -89,7 +89,7 @@ export default function HomeHero({ desktopSrc, mobileSrc, poster }: Props) {
           onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.backgroundColor = "rgba(255,255,255,0.22)")}
           onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.backgroundColor = "rgba(255,255,255,0.07)")}
         >
-          CONHEÇA A FROG
+          CONHEÇA AS PRANCHAS FROG
         </Link>
       </div>
     </section>
