@@ -29,7 +29,7 @@ export default function HomeHero({ desktopSrc, mobileSrc, poster }: Props) {
         <>
           {/* Vídeo mobile — oculto em md+ */}
           <video
-            key={mobileSrc}
+            key="hero-mobile"
             className="absolute inset-0 w-full h-full object-cover md:hidden"
             src={mobileSrc}
             poster={poster}
@@ -42,7 +42,7 @@ export default function HomeHero({ desktopSrc, mobileSrc, poster }: Props) {
           />
           {/* Vídeo desktop — visível em md+ */}
           <video
-            key={desktopSrc}
+            key="hero-desktop"
             className="absolute inset-0 w-full h-full object-cover hidden md:block"
             src={desktopSrc}
             poster={poster}
