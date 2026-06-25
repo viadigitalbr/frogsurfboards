@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
@@ -24,6 +24,15 @@ export default function Header() {
   const router = useRouter();
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    function onScroll() {
+      setScrolled(window.scrollY > 10);
+    }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   function localizedHref(path: string) {
     return locale === "pt" ? path : `/${locale}${path}`;
@@ -40,28 +49,15 @@ export default function Header() {
   }
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-frog-ink">
-      <div className="mx-auto max-w-7xl px-10 lg:px-16 flex items-center py-5 gap-8">
+    <header className="sticky top-0 z-50 w-full bg-frog-ink transition-all duration-300">
+      <div
+        className="mx-auto max-w-7xl px-10 lg:px-16 relative flex items-center transition-all duration-300"
+        style={{ paddingTop: scrolled ? "1.25rem" : "1.875rem", paddingBottom: scrolled ? "1.25rem" : "1.875rem" }}
+      >
 
-        {/* Logo */}
-        <Link
-          href={localizedHref("/")}
-          aria-label="Frog Surfboards — página inicial"
-          className="flex-shrink-0"
-        >
-          <Image
-            src="/Logo-Letter-Branco.png"
-            alt="Frog Surfboards"
-            width={120}
-            height={44}
-            className="h-11 w-auto object-contain"
-            priority
-          />
-        </Link>
-
-        {/* Desktop nav — centro */}
+        {/* Desktop nav — esquerda */}
         <nav
-          className="hidden md:flex items-center flex-1 justify-center"
+          className="hidden md:flex items-center"
           style={{ gap: "2rem" }}
           aria-label="Navegação principal"
         >
@@ -76,6 +72,38 @@ export default function Header() {
             </Link>
           ))}
         </nav>
+
+        {/* Logo — centralizado via posição absoluta */}
+        <Link
+          href={localizedHref("/")}
+          aria-label="Frog Surfboards — página inicial"
+          className="hidden md:block absolute left-1/2 -translate-x-1/2 flex-shrink-0"
+        >
+          <Image
+            src="/Logo-Letter-Branco.png"
+            alt="Frog Surfboards"
+            width={120}
+            height={44}
+            className="h-11 w-auto object-contain"
+            priority
+          />
+        </Link>
+
+        {/* Logo mobile — esquerda */}
+        <Link
+          href={localizedHref("/")}
+          aria-label="Frog Surfboards — página inicial"
+          className="md:hidden flex-shrink-0"
+        >
+          <Image
+            src="/Logo-Letter-Branco.png"
+            alt="Frog Surfboards"
+            width={120}
+            height={44}
+            className="h-11 w-auto object-contain"
+            priority
+          />
+        </Link>
 
         {/* Direita: redes + seletor idioma */}
         <div className="hidden md:flex items-center gap-4 flex-shrink-0 ml-auto">
